@@ -20,7 +20,6 @@ type ProjectItem = {
 export default function ProjectItem({
   project: { cover, properties, url },
 }: ProjectItem) {
-  console.log(properties)
   const title = properties["Name"]?.title[0]?.text?.content ?? "";
   const explain = properties["Description"]?.rich_text[0]?.plain_text ?? "";
   const coverImg = cover.file.url;
@@ -41,7 +40,7 @@ export default function ProjectItem({
     const diffInMs = Math.abs(endDate - startDate);
     const result = diffInMs / (1000 * 60 * 60 * 24);
 
-    return result;
+    return result+1;
   };
   
 
