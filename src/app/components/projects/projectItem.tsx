@@ -46,7 +46,9 @@ export default function ProjectItem({
 
   return (
     <div className="project-card">
-      <Image className="rounded-t-xl" src={coverImg} alt="cover image" width="100%" height='60%' layout="responsive" objectFit="none" quality={100}></Image>
+      <div style={{ position: 'relative', width: '100%', height: '500px' }}>
+        <Image className="rounded-t-xl" src={coverImg} alt="cover image" layout="fill" objectFit="contain" quality={100}></Image>
+      </div>
       <div className="p-4 flex flex-col">
         <h1 className="text-2xl font-bold">{title}</h1>
         <h3 className="mt-4 text-xl">{explain}</h3>
